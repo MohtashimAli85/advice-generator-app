@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <script>
+      tailwind.config = {
+        content: ["./src/**/*.{html,js}"],
+        theme: {
+          extend: {
+            colors: {
+              "light-cyan": "hsl(193, 38%, 86%)",
+              "neon-green": "hsl(150, 100%,66%)",
+              "grayish-blue": "hsl(217, 19%, 38%)",
+              "dark-grayish-blue": "hsl(217, 19%, 24%)",
+              "neon-green-light": "#33c57c",
+            },
+            fontFamily: {
+              sans: ["Manrope", "sans-serif"],
+            },
+            transitionProperty: {
+              "max-height": "max-height",
+              width: "width",
+              height: "height",
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Advice generator app</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .color {
+        color: #33c57c;
+      }
+    </style>
+  </head>
+  <body
+    class="m-0 p-0 box-sizing bg-dark-grayish-blue sm:flex sm:justify-center sm:items-center h-full"
+  >
+    <div
+      class="mx-4 mt-20 sm:m-0 min-w-[250px] sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl bg-grayish-blue p-8 rounded-xl text-center relative"
+    >
+      <p
+        id="advice-id"
+        class="text-neon-green -tracking-[-0.2rem] text-xs font-semibold"
+      >
+        ADVICE #117
+      </p>
+      <div class="height transition-[height] duration-300">
+        <h1
+          class="advice text-light-cyan font-extrabold text-sm sm:text-2xl md:text-3xl mt-4 mb-6 w-full h-fit"
+        >
+          "It is easy to sit up and take notice, what's difficult is getting up
+          and taking action."
+        </h1>
+      </div>
+
+      <div class="patterns my-3 relative mb-8">
+        <div
+          class="sm:hidden before:content-[''] before:block before:w-2/4 sm:before:w-2/5 before:h-[1.2px] before:bg-light-cyan before:rounded before:absolute before:-left-5 sm:before:left-1 before:top-[0.35rem] after:-right-5 sm:after:right-1 after:top-[0.35rem] after:content-[''] after:block after:w-2/4 sm:after:w-2/5 after:h-[1.2px] after:bg-light-cyan after:rounded after:absolute"
+        >
+          <img
+            src="images/pattern-divider-mobile.svg"
+            alt="pattern"
+            class="mx-auto"
+          />
+        </div>
+        <div
+          class="hidden sm:block before:content-[''] before:block before:w-2/5 before:h-[1.2px] before:bg-light-cyan before:rounded before:absolute before:left-4 before:top-[0.35rem] after:right-4 after:top-[0.35rem] after:content-[''] after:block after:w-2/5 after:h-[1.2px] after:bg-light-cyan after:rounded after:absolute"
+        >
+          <img
+            src="images/pattern-divider-desktop.svg"
+            alt="pattern"
+            class="mx-auto"
+          />
+        </div>
+      </div>
+      <div
+        class="bg-neon-green w-fit mx-auto rounded-full absolute left-0 right-0 hover:bg-neon-green-light cursor-pointer transition duration-300"
+      >
+        <img
+          src="images/icon-dice.svg"
+          alt="dice icon"
+          class="p-4 m-1 hover:scale-150 transition-transform duration-300 btn-dice"
+        />
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
